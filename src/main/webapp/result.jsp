@@ -12,11 +12,11 @@
     <h2>Result</h2>
     <br>
     <c:if test="${weatherData.getCod() == 200}">
-        <c:out value="${weatherData.getResult()}"/>
+        <c:out value="${weatherData.getResult()}" escapeXml="false"/>
     </c:if>
 
     <c:if test="${weatherData.getCod() != 200}">
-        <c:out value="${weatherData.getError()}"/>
+        <c:out value="${weatherData.getError()}" escapeXml="false"/>
     </c:if>
 
 </c:if>

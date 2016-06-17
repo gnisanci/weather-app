@@ -20,21 +20,21 @@ public class WeatherData {
 
     public String getResult() {
         StringBuffer sb = new StringBuffer();
-        sb.append("Date=").append(today);
-        sb.append(" City=").append(city);
-        sb.append(" Description=").append(description);
-        sb.append(" Temp-Celcius=").append(temperatureCelcius);
-        sb.append(" Temp-Fahrenheit=").append(temperatureFahrenheit);
-        sb.append(" Sunrise=").append(new SimpleDateFormat("K:ma").format(new Timestamp(sunrise * 1000)));
-        sb.append(" Sunset=").append(new SimpleDateFormat("K:ma").format(new Timestamp(sunset * 1000)));
+        sb.append("<b>").append("Date=").append("</b>").append(today).append("<br>");
+        sb.append("<b>").append("City=").append("</b>").append(city).append("<br>");
+        sb.append("<b>").append("Description=").append("</b>").append(description).append("<br>");;
+        sb.append("<b>").append("Temp-Celcius=").append("</b>").append(temperatureCelcius).append("<br>");;
+        sb.append("<b>").append("Temp-Fahrenheit=").append("</b>").append(temperatureFahrenheit).append("<br>");;
+        sb.append("<b>").append("Sunrise=").append("</b>").append(new SimpleDateFormat("K:ma").format(new Timestamp(sunrise * 1000))).append("<br>");;
+        sb.append("<b>").append("Sunset=").append("</b>").append(new SimpleDateFormat("K:ma").format(new Timestamp(sunset * 1000))).append("<br>");;
 
         return sb.toString();
     }
 
     public String getError() {
         StringBuffer sb = new StringBuffer();
-        sb.append("Cod=").append(cod).append("\n");
-        sb.append("Message=").append(message).append("\n");
+        sb.append("<b>").append("Cod=").append("</b>").append(cod).append("<br>");;
+        sb.append("<b>").append("Message=").append("</b>").append(message).append("<br>");;
 
         return sb.toString();
     }
